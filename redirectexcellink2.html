@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+Please wait, loading your page...<br/>
+<script type="text/javascript">
+function getQueryString() {
+  var index = window.location.href.indexOf("?Data=");
+  var query = window.location.href.substring(index+6);
+  for (var iii = 0; iii < 10; iii++) {
+    query = query.replace("%3D", "=");
+    query = query.replace("%3F", "?");
+    query = query.replace("%2F", "/");
+    query = query.replace("%26", "&");
+  }
+  return query;
+}
+var newUrl = "https://cec20210914.crm7.dynamics.com/" + getQueryString();
+window.location = newUrl;
+</script>
+</body>
+</html>
